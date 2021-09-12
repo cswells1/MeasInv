@@ -4,14 +4,14 @@
 #' two groups.
 #'
 #' @param data numeric: either the data matrix only, or the data matrix plus the vector of group membership.
-#' @param grp factor:  the vector of group membership
+#' @param group factor:  the vector of group membership
 #' @param sig.level numeric: the significance level
 #' @param purify logical: Default is FALSE
 #' @param output.filename character: either the file path or file name to save the output
 #'
 #' @export
 #'
-DIF.Logistic.MG <- function(data,grp,sig.level,purify,output.filename){
+DIF.Logistic.MG <- function(data,group,sig.level,purify,output.filename){
   test.length <- length(data[1,])
   G2.uni <- matrix(-999,test.length,ncol=1)
   G2.nonuni <- matrix(-999,test.length,ncol=1)
@@ -25,7 +25,7 @@ DIF.Logistic.MG <- function(data,grp,sig.level,purify,output.filename){
   x <- apply(data[,1:test.length],1,sum)
   for (i in 1:test.length){
     Model.1 <- lrm(data[,i] ~ x)
-    Model.3 <- lrm(data[,i] ~ x + grp + grp*x)
+    Model.3 <- lrm(data[,i] ~ x + group + group*x)
     G2.both[i] <- round(Model.3$stats[3] - Model.1$stats[3],3)
     change.R2.both[i] <- round(Model.3$stats[10]-Model.1$stats[10],3)
   }
@@ -43,8 +43,8 @@ DIF.Logistic.MG <- function(data,grp,sig.level,purify,output.filename){
   }
   for (i in 1:test.length){
     Model.1 <- lrm(data[,i] ~ x)
-    Model.2 <- lrm(data[,i] ~ x + grp)
-    Model.3 <- lrm(data[,i] ~ x + grp + grp*x)
+    Model.2 <- lrm(data[,i] ~ x + group)
+    Model.3 <- lrm(data[,i] ~ x + group + group*x)
     G2.uni[i] <- round(Model.2$stats[3] - Model.1$stats[3],3)
     change.R2.uni[i] <- round(Model.2$stats[10]-Model.1$stats[10],3)
     G2.nonuni[i] <- round(Model.3$stats[3] - Model.2$stats[3],3)

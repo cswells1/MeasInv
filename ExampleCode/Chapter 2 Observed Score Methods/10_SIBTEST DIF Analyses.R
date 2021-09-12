@@ -2,8 +2,6 @@
 # The following code uses Logistic Regression to test for DIF using the difLogistic             #
 # function that is located in the difR package.                                       		#
 #################################################################################################
-# Set working directory to location of data file. #
-setwd("c:\\dropbox\\books\\Measurement Invariance\\data\\")
 
 # Load rms package: It performs logistic (binary and ordinal) tha is used by  #
 # the DIF.Logistic function.                                                  #
@@ -12,7 +10,8 @@ library(mirt)
 # Read data: The data are in in a csv file in which first 30 columns #
 # represent item responses and the last column contains the grouping #
 # variable.                                                          #
-MC.data <- read.csv("MCData.csv", sep=",", header=T)
+myfile <- system.file("extdata", "MCData.csv", package = "MeasInv")
+MC.data <- read.csv(myfile, sep=",", header=T)
 
 MC.data$group <- factor(MC.data$group) # Convert the grouping variable, "group", to a factor #
 						   # which means R treats it as an unordered-categorical #
@@ -40,7 +39,8 @@ SIBTEST.results <- SIBTEST.exp(data = MC.data[,1:30], grp = MC.data$group,
 # Read data: The data are in in a csv file in which first 12 columns #
 # represent item responses and the last column contains the grouping #
 # variable.                                                          #
-Likert.data <- read.csv("LikertData.csv", sep=",", header=T)
+myfile <- system.file("extdata", "LikertData.csv", package = "MeasInv")
+Likert.data <- read.csv(myfile, sep=",", header=T)
 
 Likert.data$group <- factor(Likert.data$group) # Convert the grouping variable, "group", to a factor #
 # which means R treats it as an unordered-categorical #

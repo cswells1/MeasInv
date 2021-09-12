@@ -4,7 +4,7 @@
 \alias{plot.cond.exp}
 \title{Plots of the conditional expected scores for polytomous item}
 \usage{
-\method{plot}{cond.exp}(data, group, item, focal.name, ref.name, anchor)
+plot.cond.exp(data, group, item, focal.name, ref.name, anchor)
 }
 \arguments{
 \item{data}{numeric: either the data matrix only, or the data matrix plus the vector of group membership.}

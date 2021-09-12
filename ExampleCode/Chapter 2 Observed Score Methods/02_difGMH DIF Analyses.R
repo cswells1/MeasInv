@@ -2,8 +2,6 @@
 # The following code performs the Mantel-Haenszel DIF method using         				#
 # the difMH function that is located in the difR package.                                       #
 #################################################################################################
-# Set working directory to location of data file. #
-setwd("c:\\dropbox\\books\\Measurement Invariance\\Data\\")
 
 # Load difR package: It contains the difTID function for performing   #
 # the TID method which uses the distance from the principal axis line #
@@ -13,7 +11,8 @@ library(difR)
 # Read data: The data are in in a csv file in which first 30 columns #
 # represent item responses and the last column contains the grouping #
 # variable.                                                          #
-MC.data <- read.csv("MCData3Group.csv", sep=",", header=T)
+myfile <- system.file("extdata", "MCData3Group.csv", package = "MeasInv")#
+MC.data <- read.csv(myfile, sep=",", header=T)
 
 MC.data$group <- factor(MC.data$group) # Convert the grouping variable, "group", to a factor #
 						   # which means R treats it as an unordered-categorical #

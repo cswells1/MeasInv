@@ -1,0 +1,34 @@
+---
+title: 'MeasInv: DIF detection methods for dichotomous and polytomous items'
+output: 
+  github_document:
+    fig_width: 6
+    fig_heigh: 3
+---
+
+### Table of Contents 
+* [Installation](#installation)
+* [Introduction](#introduction)
+* [Example Code](#example-files) 
+* [Ending](#ending) 
+
+
+
+### Installation
+
+To install the most recent version from [GitHub](https://github.com/xluo11/xxIRT), call `devtools::install_github("cswells1/MeasInv")` in R console (if the *devtools* package has not been installed yet, install it first). To remove the package, call `remove.packages("MeasInv")` in R console. 
+
+
+### Introduction
+
+**MeasInv** is an R package designed to provide a collection of standard methods to detect differential item functioning (DIF) for dichotomous and polytomous items 
+
+
+### Example files 
+
+'ExampleCode' folder includes all examples shown in Wells, C. S. (2021). Assessing Measurement Invariance for Applied Research. Cambridge University Press. 
+
+
+### Ending
+
+Please send comments, questions and feature requests to the [author](mailto:cswells@umass.edu). To report bugs, go to the [issues](https://github.com/cswells/MeasInv/issues) page.

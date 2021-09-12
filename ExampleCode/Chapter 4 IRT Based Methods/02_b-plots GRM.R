@@ -2,16 +2,18 @@
 # The following code uses Logistic Regression to test for DIF using the difLogistic             #
 # function that is located in the difR package.                                       		#
 #################################################################################################
-# Set working directory to location of data file. #
-setwd("c:\\dropbox\\books\\Measurement Invariance\\Chapter 4 Methods Based on IRT\\Data\\")
-
 
 # Read item paramter files from flexMIRT: The data are in a csv file in which first 30 columns #
 # represent item responses and the last column contains the grouping #
 # variable.                                                          #
-Ref.est <- read.table("LikertReference.par", header=FALSE, sep=",")
-Foc.est <- read.table("LikertFocal.par", header=FALSE, sep=",")
 
+# For Reference Group
+myfile <- system.file("extdata", "LikertReference.par", package = "MeasInv")
+Ref.est <- read.table(myfile, header = FALSE, sep = ",") 
+
+# For Focal Group
+myfile <- system.file("extdata", "LikertFocal.par", package = "MeasInv")
+Foc.est <- read.table(myfile, header = FALSE, sep = ",")
 
 # Examine threshold parameters #
 b.Ref <- c(t(as.matrix(Ref.est[,5:8])))

@@ -4,12 +4,12 @@
 \alias{DIF.Logistic.MG}
 \title{Logistic regression DIF method for more than two groups}
 \usage{
-DIF.Logistic.MG(data, grp, sig.level, purify, output.filename)
+DIF.Logistic.MG(data, group, sig.level, purify, output.filename)
 }
 \arguments{
 \item{data}{numeric: either the data matrix only, or the data matrix plus the vector of group membership.}
 
-\item{grp}{factor:  the vector of group membership}
+\item{group}{factor:  the vector of group membership}
 
 \item{sig.level}{numeric: the significance level}
 

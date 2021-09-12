@@ -4,7 +4,7 @@
 \alias{plot.traceline}
 \title{Plot ICC and TCC}
 \usage{
-\method{plot}{traceline}(
+plot.traceline(
   x,
   item.loc = NULL,
   score.curve = FALSE,

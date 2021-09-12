@@ -4,7 +4,7 @@
 \alias{plot.cond.p}
 \title{The conditional p-value plot for the Standardized p-value difference (DSTD)}
 \usage{
-\method{plot}{cond.p}(data, item, grp, focal.name, ref.name, anchor)
+plot.cond.p(data, item, grp, focal.name, ref.name, anchor)
 }
 \arguments{
 \item{data}{numeric: either the data matrix only, or the data matrix plus the vector of group membership.}

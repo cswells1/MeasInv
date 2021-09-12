@@ -3,13 +3,11 @@
 # using the SMD function.                   		                                    #
 #####################################################################################
 
-# Set working directory to location of data file. #
-setwd("c:\\dropbox\\books\\Measurement Invariance\\Data\\")
-
 # Read data: The data are in in a csv file in which first 12 columns #
 # represent item responses and the last column contains the grouping #
 # variable.                                                          #
-Likert.data <- read.csv("LikertData.csv", sep=",", header=T)
+myfile <- system.file("extdata", "LikertData.csv", package = "MeasInv")
+Likert.data <- read.csv(myfile, sep=",", header=T)
 
 Likert.data$group <- factor(Likert.data$group)  # Convert the grouping variable, "group", to a factor #
                                                 # which means R treats it as an unordered-categorical #

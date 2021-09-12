@@ -4,18 +4,21 @@
 # MeasInv package.                                                                                       #
 ##########################################################################################################
 
-# Set wording directory where data are located #
-setwd("c:\\dropbox\\books\\Measurement Invariance\\Chapter 4 Methods Based on IRT\\Data\\")
-# setwd("c:\\HJ\\Project\\2021_DIF\\Chapter 4 IRT Based Methods\\Lord Chisquare\\")
 # Load irtplay and dplyr packages #
 library(dplyr)
 library(irtplay)
 
-
 ### 3PLM ###
 # Read item parameter estimates #
-Ref.est <- read.table("MCDataRef3PL.par", header = FALSE, sep = ",")
-Foc.est <- read.table("MCDataFoc3PL.par", header = FALSE, sep = ",")
+
+# For Reference Group
+myfile <- system.file("extdata", "MCDataRef3PL.par", package = "MeasInv")
+Ref.est <- read.table(myfile, header = FALSE, sep = ",") 
+
+# For Focal Group
+myfile <- system.file("extdata", "MCDataFoc3PL.par", package = "MeasInv")
+Foc.est <- read.table(myfile, header = FALSE, sep = ",")
+
 
 # Compute covariance matrix #
 Foc.cov <- covirt(Foc.est, D=1, nstd=2500, norm.prior=c(0, 1), nquad=15)$cov
@@ -28,10 +31,17 @@ plot.ICC(par.R = Lord.results$par.est.Ref, par.F = Lord.results$par.est.Focal.t,
 
 
 
-### Samejima's GRM ###
+### Samejima's GRM ### 
 # Read item parameter estimates #
-Ref.est <- read.table("LikertReference.par", header=FALSE, sep=",")
-Foc.est <- read.table("LikertFocal.par", header=FALSE, sep=",")
+
+# For Reference Group
+myfile <- system.file("extdata", "LikertReference.par", package = "MeasInv")
+Ref.est <- read.table(myfile, header = FALSE, sep = ",") 
+
+# For Focal Group
+myfile <- system.file("extdata", "LikertFocal.par", package = "MeasInv")
+Foc.est <- read.table(myfile, header = FALSE, sep = ",")
+
 
 # Compute covariance matrix #
 Foc.cov <- covirt(Foc.est, D=1, nstd=2500, norm.prior=c(0, 1), nquad=15)$cov
@@ -44,10 +54,17 @@ plot.ICC(par.R=Lord.results$par.est.Ref, par.F=Lord.results$par.est.Focal.t, ite
 plot.ICC(par.R=Lord.results$par.est.Ref, par.F=Lord.results$par.est.Focal.t, item=11, D=1)
 
 
+
 ### Mixed Format Test: 3PLM and GPCM ###
-# Read item parameter estimates #
-Ref.est <- read.table("MixedDataReference.par", header=FALSE, sep=",")
-Foc.est <- read.table("MixedDataFocal.par", header=FALSE, sep=",")
+# Read item parameter estimates # 
+
+# For Reference Group
+myfile <- system.file("extdata", "MixedDataReference.par", package = "MeasInv")
+Ref.est <- read.table(myfile, header = FALSE, sep = ",") 
+
+# For Focal Group
+myfile <- system.file("extdata", "MixedDataFocal.par", package = "MeasInv")
+Foc.est <- read.table(myfile, header = FALSE, sep = ",")
 
 # Compute covariance matrix #
 Foc.cov <- covirt(Foc.est, D=1, nstd=2500, norm.prior=c(0, 1), nquad=15)$cov

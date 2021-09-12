@@ -1,12 +1,15 @@
 #################################################################################################
 # This code performs the b-plot DIF method.                                        		          #
 #################################################################################################
-# Set working directory to location of data file. #
-setwd("c:\\dropbox\\books\\Measurement Invariance\\Chapter 4 Methods Based on IRT\\Data\\")
 
-# Read item parameter file (3PLM) #
-Ref.est <- read.table("MCDataRef3PL.par", header = FALSE, sep = ",")
-Foc.est <- read.table("MCDataFoc3PL.par", header = FALSE, sep = ",")
+# Read item parameter files (3PLM) # 
+# For Reference Group
+myfile <- system.file("extdata", "MCDataRef3PL.par", package = "MeasInv")
+Ref.est <- read.table(myfile, header = FALSE, sep = ",") 
+
+# For Focal Group
+myfile <- system.file("extdata", "MCDataFoc3PL.par", package = "MeasInv")
+Foc.est <- read.table(myfile, header = FALSE, sep = ",")
 
 # Peform b-plot DIF procedure using the b.plot function #
 b.plot(b.R = Ref.est[,5], b.F = Foc.est[,5], purify = "yes", sig.level = .01)
