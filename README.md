@@ -20,7 +20,7 @@ remove the package, call `remove.packages("MeasInv")` in R console.
 
 **MeasInv** is an R package designed to provide a collection of standard
 methods to detect differential item functioning (DIF) for dichotomous
-and polytomous items
+and polytomous items.
 
 ### Example files
 
