@@ -1,0 +1,104 @@
+
+Detection of Differential Item Functioning using standardization method 
+with item purification
+
+Weights based on the focal group 
+ 
+Convergence reached after 1 iteration
+
+Matching variable: test score 
+ 
+No set of anchor items was provided 
+ 
+Standardized P-DIF statistic: 
+ 
+       Stat.     
+item1   0.0111   
+item2  -0.0351   
+item3  -0.0113   
+item4   0.0018   
+item5   0.0228   
+item6  -0.0072   
+item7  -0.0072   
+item8  -0.0152   
+item9  -0.0113   
+item10  0.0230   
+item11  0.0094   
+item12 -0.0019   
+item13  0.0290   
+item14  0.0210   
+item15  0.0067   
+item16 -0.0155   
+item17 -0.0624 * 
+item18 -0.0235   
+item19  0.0001   
+item20 -0.1312 **
+item21  0.0097   
+item22  0.0297   
+item23 -0.0035   
+item24 -0.0095   
+item25 -0.0269   
+item26  0.0339   
+item27 -0.0219   
+item28 -0.0389   
+item29  0.0033   
+item30  0.0275   
+
+Signif. codes (abs. values): 0 ' ' 0.04 '.' 0.05 '*' 0.1 '**' 0.2 '***' 1  
+
+Detection thresholds: -0.05 and 0.05
+
+Items detected as DIF items: 
+       
+ item17
+ item20
+
+ 
+Effect sizes: 
+ 
+Effect size code: 
+ 'A': negligible effect 
+ 'B': moderate effect 
+ 'C': large effect 
+ 
+       St-P-DIF alphaStd deltaStd DSB ETS
+item1   0.0111   0.9567   0.1041  A   A  
+item2  -0.0351   1.2258  -0.4784  A   A  
+item3  -0.0113   1.0481  -0.1104  A   A  
+item4   0.0018   0.9926   0.0176  A   A  
+item5   0.0228   0.9061   0.2316  A   A  
+item6  -0.0072   1.0355  -0.0820  A   A  
+item7  -0.0072   1.0461  -0.1060  A   A  
+item8  -0.0152   1.0629  -0.1433  A   A  
+item9  -0.0113   1.0847  -0.1910  A   A  
+item10  0.0230   0.9094   0.2231  A   A  
+item11  0.0094   0.9621   0.0908  A   A  
+item12 -0.0019   1.0076  -0.0178  A   A  
+item13  0.0290   0.8870   0.2817  A   A  
+item14  0.0210   0.9162   0.2056  A   A  
+item15  0.0067   0.9712   0.0687  A   A  
+item16 -0.0155   1.0708  -0.1608  A   A  
+item17 -0.0624   1.4323  -0.8443  B   A  
+item18 -0.0235   1.1069  -0.2387  A   A  
+item19  0.0001   0.9994   0.0013  A   A  
+item20 -0.1312   1.7714  -1.3436  C   B  
+item21  0.0097   0.9578   0.1012  A   A  
+item22  0.0297   0.8879   0.2795  A   A  
+item23 -0.0035   1.0201  -0.0468  A   A  
+item24 -0.0095   1.0425  -0.0979  A   A  
+item25 -0.0269   1.1215  -0.2694  A   A  
+item26  0.0339   0.8722   0.3213  A   A  
+item27 -0.0219   1.1025  -0.2293  A   A  
+item28 -0.0389   1.2867  -0.5924  A   A  
+item29  0.0033   0.9869   0.0310  A   A  
+item30  0.0275   0.8951   0.2605  A   A  
+
+Effect size codes: 
+ Dorans, Schmitt & Bleistein (DSB): 0 'A' 0.05 'B' 0.10 'C' 
+  (for absolute values of 'St-P-DIF') 
+ ETS Delta Scale (ETS): 0 'A' 1 'B' 1.5 'C' 
+  (for absolute values of 'deltaStd') 
+
+Output was captured and saved into file
+ 'c:/HJ/Project/2021_DIF/Chapter 4 IRT Based Methods/Lord Chisquare/STD Output.txt'
+
